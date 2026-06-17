@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetPlatformVersion>10.0.22621.0</TargetPlatformVersion>
+    <UseWinUI>true</UseWinUI>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishProfile>win10-x64</PublishProfile>
+    <Nullable>enable</Nullable>
+    <Platforms>x64</Platforms>
+    <SelfContained>true</SelfContained>
+    <UseWindowsUIXamlTooling>true</UseWindowsUIXamlTooling>
+    <GenerateAppxPackageOnBuild>false</GenerateAppxPackageOnBuild>
+    
+    <!-- معلومات التطبيق -->
+    <AssemblyName>Elsenusy</AssemblyName>
+    <RootNamespace>Elsenusy</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>Elsenusy Development</Authors>
+    <Description>تطبيق كاشير متقدم لسطح المكتب</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- WinUI 3 -->
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.240705000" />
+    <PackageReference Include="Microsoft.Windows.AppNotifications" Version="1.0.2" />
+    <PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.0.1" />
+
+    <!-- Entity Framework Core و SQLite -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+    <!-- MVVM Toolkit للـ MVVM -->
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+
+    <!-- مكتبات مساعدة -->
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Services\" />
+    <Folder Include="Data\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+</Project>
